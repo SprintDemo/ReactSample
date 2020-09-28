@@ -5,6 +5,7 @@ class App extends React.Component {
     super();
     this.state = {
       displayBio: true,
+      name: "JavatPoint",
       data: [
         {
           id: 1,
@@ -37,8 +38,17 @@ class App extends React.Component {
     return (
       <div>
         <h1> Welcome to JavaTpoint!! </h1>
-        {bio}
-
+        <div>
+          <h1> Welcome to {this.props.name} </h1>
+          <p>
+            {" "}
+            <h4>
+              {" "}
+              Javatpoint is one of the best Java training institute in Noida,
+              Delhi, Gurugram, Ghaziabad and Faridabad.{" "}
+            </h4>{" "}
+          </p>
+        </div>
         <ul>
           {this.state.data.map((item) => (
             <DisplayList data={item} />
